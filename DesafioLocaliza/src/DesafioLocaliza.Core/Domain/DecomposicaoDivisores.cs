@@ -42,6 +42,7 @@ namespace DesafioLocaliza.Core
             {
                 throw new DecomposicaoException("Por favor, informe um número posítivo válido.");
             }
+
             this.ListaDivisores = CalculaDivisoresExtensions.RetornaDivisores(FatorDecomposicao)?.ToList();
             this.ListaDivisoresPrimos = ListaDivisores?.Where(t => VerificaNumeroSePrimoExtensions.EhPrimo(t))?.ToList();
         }
